@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 
-class UC01 {
+class UT01 {
 
     @Test
     void testChrome() throws  InterruptedException {
@@ -43,12 +45,8 @@ class UC01 {
         
         System.out.println("age : "+ageValue);
         
-        if (ageValue.equals(21)) {
-            System.out.println("Age verification successful!");
-        } else {
-            System.out.println("Age verification failed!");
-        }
-       
+        assertEquals(ageValue, "21" );
+        
         Thread.sleep(5000);
 
         driver.quit();
