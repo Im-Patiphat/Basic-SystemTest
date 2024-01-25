@@ -20,9 +20,9 @@ class UC01 {
         Select dropdown = new Select(driver.findElement(By.id("pre_name_th")));
         WebElement search_name = driver.findElement(By.name("name_th"));
         WebElement search_lastname = driver.findElement(By.name("lastname_th"));
-        dropdown.selectByValue("���");
-        search_name.sendKeys("��Ծѷ��");
-        search_lastname.sendKeys("�ѵ�ʶ");
+        dropdown.selectByValue("¹ÒÂ");
+        search_name.sendKeys("»¯Ô¾Ñ·¸ì");
+        search_lastname.sendKeys("ÃÑµâ¹Ê¶");
 
         WebElement search_nameEN = driver.findElement(By.name("name_en"));
         WebElement search_lastnameEN = driver.findElement(By.name("lastname_en"));
@@ -41,9 +41,9 @@ class UC01 {
         WebElement ageInput = driver.findElement(By.id("age"));
         String ageValue = ageInput.getAttribute("value");
         
-        System.out.println("���� : "+ageValue);
+        System.out.println("ÍÒÂØ : "+ageValue);
         
-        if (ageValue.equals(ageValue)) {
+        if (ageValue.equals(21)) {
             System.out.println("Age verification successful!");
         } else {
             System.out.println("Age verification failed!");
